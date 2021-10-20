@@ -1,1 +1,35 @@
-try{window.izConfig={"client":123456,"sourceOrigin":"https:\/\/www.khaleejtimes.com","domainRoot":"","webPushId":"","webServiceUrl":"","isSdkHttps":1,"customPixelLink":"","mobileAllowed":1,"serviceWorkerName":"\/abc-mny.js","manifestName":"\/manifest.json","desktopAllowed":1,"siteUrl":"https:\/\/www.khaleejtimes.com","promptDelay":0,"repeatPromptDelay":0,"locale":"en","vapidPublicKey":"xyzabcfejnkv","welcomeNotification":{"status":0},"branding":0};var container=document.body?document.body:document.head;if(""!==izConfig.customPixelLink){var _izAlt=document.createElement("script");_izAlt.id="izootoAlt",_izAlt.src=izConfig.customPixelLink,container.appendChild(_izAlt)}else{var _iz=document.createElement("script");_iz.id="abcsdk",_iz.src=" https://ad.mox.tv/mox/mwayss_invocation.min.js?pzoneid=6529&height=405&width=720&tld=khaleejtimes.com&ctype=div ",container.appendChild(_iz)}}catch(err){}
+try {
+
+    let mscript = document.createElement("script");
+
+    mscript.src = "https://ad.mox.tv/vidverto/js/aries/v1/invocation.js";
+
+    var mnode = document.getElementsByTagName("script")[0];
+
+    mnode.parentNode.insertBefore(mscript, mnode);
+
+    g = document.createElement('div');
+    g.setAttribute("id", "mox-4e5df3e2b4c8aa732ceaea194b6a68cc");
+    document.body.appendChild(g);
+
+    (() => {
+        window.aries = window.aries || {};
+        window.aries.v1 = window.aries.v1 || {commands: []};
+
+        const aries = window.aries.v1;
+
+        aries.commands.push(() => {
+          const zoneId = '6529';
+          const anchor = document.getElementById('mox-4e5df3e2b4c8aa732ceaea194b6a68cc');
+          aries.mount(zoneId, anchor, {
+            width: 720,
+            height: 405,
+          });
+        });
+      })();
+
+} catch(err) {
+
+    console.log("Issue with apply mox video");
+
+}
