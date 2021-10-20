@@ -11,8 +11,8 @@ try {
     g = document.createElement('div');
     g.setAttribute("id", "mox-4e5df3e2b4c8aa732ceaea194b6a68cc");
     document.body.appendChild(g);
+    setTimeout(function() {
 
-    (() => {
         window.aries = window.aries || {};
         window.aries.v1 = window.aries.v1 || {commands: []};
 
@@ -26,7 +26,7 @@ try {
             height: 405,
           });
         });
-      })();
+    }, 1000);
 
 } catch(err) {
 
